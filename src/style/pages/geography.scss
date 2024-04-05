@@ -1,0 +1,9 @@
+@import "../mixins.scss";
+
+.geography {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/worldmap.jpg");
+  background-size: cover;
+  @include flex;
+}

@@ -1,0 +1,19 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.finish_screen {
+  @include container;
+  height: 50vh;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  .score {
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}

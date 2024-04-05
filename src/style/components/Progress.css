@@ -1,0 +1,34 @@
+.progress {
+  margin-top: 1rem;
+  padding: 0 3rem;
+  display: grid;
+  justify-content: space-between;
+  gap: 0.5rem;
+  grid-template-columns: auto auto;
+  font-size: 1rem;
+  color: #000;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .progress {
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  grid-column: 1/-1;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ff7730;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ffb900;
+}/*# sourceMappingURL=progress.css.map */

@@ -1,0 +1,86 @@
+.settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 20%;
+  background-color: rgba(160, 159, 102, 0.8156862745);
+  padding: 0 1rem;
+  width: 50%;
+  height: 60vh;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .settings {
+    height: 90vh;
+    width: 80vw;
+  }
+}
+.settings .primary {
+  margin-top: 2rem;
+}
+.settings .difficulty {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .settings .difficulty {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.settings .difficulty select {
+  border: 0.2em solid;
+  border-radius: 1em;
+}
+@media (max-width: 600px) {
+  .settings .difficulty select {
+    width: 50%;
+  }
+}
+.settings .numOfQuestions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .settings .numOfQuestions {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+}
+.settings .numOfQuestions input {
+  width: 15%;
+  border: 0.2em solid;
+  border-radius: 1em;
+  text-align: center;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+  margin: 0;
+}
+.settings .numOfQuestions input input::-webkit-outer-spin-button,
+.settings .numOfQuestions input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .settings .numOfQuestions input {
+    width: 50%;
+  }
+}
+
+.btn-back {
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+  line-height: 2;
+}/*# sourceMappingURL=settings.css.map */

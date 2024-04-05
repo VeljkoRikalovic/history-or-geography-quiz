@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+}
+.container .geography_container {
+  background-image: url("/worldmap.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .geography_container button {
+  margin-right: 15rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .container .geography_container button {
+    margin-top: 10rem;
+    margin-right: 10rem;
+  }
+}
+.container .geography_container:has(.geo:hover) {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+  animation: geography 2s;
+}
+.container .history_container {
+  background-image: url("/history.webp");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .history_container button {
+  margin-left: 15rem;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .container .history_container button {
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+}
+.container .history_container:has(.his:hover) {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+  z-index: 2;
+  animation: history 2s;
+}
+.container .title {
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #a09f66;
+  box-shadow: 0px 0px 58px 34px rgb(0, 0, 0);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .container .title {
+    margin-top: 3rem;
+  }
+}
+.container .title p {
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .container .title p {
+    font-size: 1rem;
+  }
+}
+
+@keyframes history {
+  0% {
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%);
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+  }
+}
+@keyframes geography {
+  0% {
+    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}/*# sourceMappingURL=homepage.css.map */

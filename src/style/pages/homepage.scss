@@ -1,0 +1,99 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.container {
+  display: flex;
+
+  .geography_container {
+    background-image: url("/worldmap.jpg");
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    @include flex;
+
+    button {
+      margin-right: 15rem;
+      padding: 0.3rem 1rem;
+      cursor: pointer;
+      @include respond(phone) {
+        margin-top: 10rem;
+        margin-right: 10rem;
+      }
+    }
+  }
+  .geography_container:has(.geo:hover) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+    animation: geography 2s;
+  }
+
+  .history_container {
+    background-image: url("/history.webp");
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%);
+    @include flex;
+
+    button {
+      margin-left: 15rem;
+      padding: 0.3rem 2rem;
+      cursor: pointer;
+      @include respond(phone) {
+        margin-top: 10rem;
+        margin-left: 10rem;
+      }
+    }
+  }
+  .history_container:has(.his:hover) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+    z-index: 2;
+    animation: history 2s;
+  }
+
+  .title {
+    z-index: 5;
+    @include flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: $color-background-two;
+    box-shadow: 0px 0px 58px 34px rgba(0, 0, 0, 1);
+    text-align: center;
+    @include respond(phone) {
+      margin-top: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@keyframes history {
+  0% {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+  }
+}
+
+@keyframes geography {
+  0% {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}

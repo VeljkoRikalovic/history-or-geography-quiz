@@ -1,0 +1,25 @@
+@mixin container() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-background-one;
+  border-radius: 20%;
+  padding: 0 1rem;
+  width: 50vw;
+  height: 100vh;
+}
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}

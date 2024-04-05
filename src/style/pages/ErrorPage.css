@@ -1,0 +1,16 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(160, 159, 102, 0.8156862745);
+  border-radius: 20%;
+  padding: 0 1rem;
+  width: 50vw;
+  height: 100vh;
+  border-radius: 0%;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.5rem;
+  font-weight: 500;
+}/*# sourceMappingURL=ErrorPage.css.map */
