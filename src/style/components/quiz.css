@@ -18,6 +18,7 @@
   width: 50vw;
   height: 100vh;
   list-style-type: none;
+  justify-content: center;
 }
 @media (max-width: 600px) {
   .question .quiz {

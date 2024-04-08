@@ -7,7 +7,7 @@ function FinishScreen(): JSX.Element {
   const dispatch = useQuizDipatch();
   const navigate = useNavigate();
 
-  const percentage = (points / 100) * 100;
+  const percentage = (points / (numOfQuestions * 10)) * 100;
   let score;
   if (percentage === 100) score = "Congratulations";
   if (percentage >= 80 && percentage < 100) score = "So close!";
@@ -29,7 +29,7 @@ function FinishScreen(): JSX.Element {
         }}
         className="primary"
       >
-        Restart quiz
+        Try again!
       </button>
     </div>
   );

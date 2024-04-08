@@ -268,6 +268,7 @@
   width: 50vw;
   height: 100vh;
   list-style-type: none;
+  justify-content: center;
 }
 @media (max-width: 600px) {
   .question .quiz {
@@ -324,7 +325,7 @@
 }
 
 .progress {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 0 3rem;
   display: grid;
   justify-content: space-between;
