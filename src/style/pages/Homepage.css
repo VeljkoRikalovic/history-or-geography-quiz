@@ -31,7 +31,7 @@
   animation: geography 2s;
 }
 .container .history_container {
-  background-image: url("/history.webp");
+  background-image: url("/history.jpg");
   background-size: cover;
   position: absolute;
   width: 100%;
